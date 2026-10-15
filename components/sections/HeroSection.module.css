@@ -1,0 +1,65 @@
+.hero { position: relative; isolation: isolate; height: 850px; padding-top: 80px; overflow: hidden; background: var(--clr-white); }
+.container { position: relative; height: 100%; }
+.greeting { display: flex; align-items: center; gap: 7px; font-family: var(--ff-syne); font-size: 20px; font-weight: 700; }
+.heading { position: relative; z-index: 2; margin: 24px 0 0; font-family: var(--ff-heading); font-size: clamp(64px, 6vw, 88px); font-weight: 600; line-height: 1.15; letter-spacing: -0.025em; }
+.content { position: relative; z-index: 3; margin-left: 33.333%; }
+.description { max-width: 660px; margin: 30px 0 42px; font-size: 18px; line-height: 1.65; color: var(--clr-gray); }
+.actions, .buttons, .socials { display: flex; align-items: center; }
+.actions { flex-wrap: wrap; gap: 24px; }
+.buttons { gap: 15px; flex-wrap: wrap; }
+.arrow { width: 100px; height: auto; }
+.socials { gap: 15px; }
+.socials a { width: 60px; height: 60px; display: grid; place-items: center; border-radius: 50%; background: var(--clr-light-gray); transition: color .3s, background .3s; }
+.socials a:hover { color: white; background: var(--clr-black); }
+.contactBadge { position: absolute; top: 0; right: 12px; z-index: 4; display: grid; place-items: center; width: 128px; height: 128px; }
+.contactArrow { position: absolute; }
+.portrait { position: absolute; top: 150px; left: -300px; width: 652px; pointer-events: none; }
+.portraitImage { display: block; width: 100%; height: auto; }
+.diagonal { position: absolute; z-index: -1; top: 265px; left: -420px; width: 1514px; height: 1px; background: rgb(15 14 14 / 10%); transform: rotate(147deg); }
+.diagonal::after { content: ""; position: absolute; left: 50%; top: -37px; width: 74px; height: 74px; border: 2px solid var(--clr-light-gray); border-radius: 50%; background: white; }
+.profession { position: relative; margin: 70px 0 0 33.333%; width: max-content; max-width: 66.667%; font-family: var(--ff-syne); font-size: clamp(36px, 4.5vw, 68px); font-weight: 700; line-height: 1.15; letter-spacing: -.035em; color: white; -webkit-text-stroke: 1px rgb(15 14 14 / 25%); white-space: nowrap; }
+.profession::before { content: attr(data-text); position: absolute; top: calc(100% + 8px); left: 0; transform: scaleY(-1); opacity: .35; }
+.profession::after { content: ""; position: absolute; top: 100%; left: 0; width: 100%; height: 90px; background: linear-gradient(transparent, white 85%); }
+@media (max-width: 1399px) {
+  .hero { padding-top: 50px; }
+  .arrow { display: none; }
+  .heading { font-size: 80px; }
+  .portrait { left: -250px; width: 600px; }
+}
+@media (max-width: 1199px) {
+  .hero { height: 790px; padding-top: 40px; }
+  .heading { font-size: 72px; }
+  .portrait { left: -230px; width: 540px; }
+  .description { font-size: 16px; }
+  .contactBadge { width: 100px; height: 100px; }
+  .contactArrow { width: 60px; height: 60px; }
+  .profession { margin-top: 55px; }
+}
+@media (max-width: 991px) {
+  .hero { height: 730px; }
+  .heading { font-size: 60px; }
+  .contactBadge { top: -18px; width: 86px; height: 86px; }
+  .diagonal { display: none; }
+  .portrait { top: 170px; left: -220px; width: 470px; }
+  .content { margin-left: 35%; }
+  .actions { gap: 20px; }
+  .buttons { gap: 10px; }
+  .buttons :global(.bttn) { padding: 14px 20px; font-size: 14px; }
+  .socials a { width: 48px; height: 48px; }
+  .profession { margin-left: 35%; font-size: 34px; }
+}
+@media (max-width: 767px) {
+  .hero { height: auto; min-height: 0; padding: 30px 0 65px; }
+  .container { display: flex; flex-direction: column; height: auto; }
+  .greeting { order: 1; font-size: 18px; }
+  .heading { order: 2; margin: 12px 0 0; font-size: clamp(36px, 8.5vw, 60px); }
+  .contactBadge { display: none; }
+  .portrait { order: 3; position: relative; top: auto; left: auto; width: min(100%, 480px); margin: 18px auto 0; }
+  .content { order: 5; margin: 0; }
+  .description { margin: 0 0 24px; }
+  .profession { order: 4; margin: 24px 0 70px; max-width: 100%; font-size: clamp(22px, 5.4vw, 38px); }
+  .profession::after { height: 55px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .contactBadge img { animation: none; }
+}

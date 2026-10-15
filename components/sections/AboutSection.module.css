@@ -1,0 +1,26 @@
+.about { padding: 150px 0; overflow: hidden; background: white; }
+.headline { margin: 50px 0 35px; font-size: clamp(28px, 3.7vw, 52px); line-height: 1.19; font-weight: 700; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.experience { position: relative; padding: 45px 0 0 20%; }
+.counter { font-family: var(--ff-syne); font-size: clamp(130px, 15vw, 200px); font-weight: 700; line-height: 1.05; letter-spacing: -.06em; }
+.experienceTitle { margin: 30px 0 50px; font-size: 40px; line-height: 1.2; }
+.arrow { position: absolute; top: 35px; left: 0; width: 85px; height: auto; }
+.shape { position: absolute; top: 270px; right: 20px; }
+.portrait { background: var(--clr-light-gray); overflow: hidden; }
+.image { display: block; width: 100%; height: 550px; object-fit: contain; object-position: bottom; }
+.copy { display: grid; gap: 20px; padding-top: 30px; color: var(--clr-gray); font-size: 16px; line-height: 1.75; }
+@media (max-width: 1199px) {
+  .about { padding: 100px 0; }
+  .grid { gap: 35px; }
+  .shape { width: 65px; right: 0; }
+  .image { height: 460px; }
+}
+@media (max-width: 767px) {
+  .about { padding: 80px 0; }
+  .headline { margin: 35px 0; }
+  .grid { grid-template-columns: 1fr; gap: 45px; }
+  .experience { padding: 0 0 0 22%; }
+  .experienceTitle { font-size: 32px; margin: 20px 0 30px; }
+  .shape { top: 140px; right: 12%; }
+  .image { height: 420px; }
+}
