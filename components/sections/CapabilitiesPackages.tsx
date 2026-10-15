@@ -28,11 +28,11 @@ export function CapabilitiesPackages() {
               <div>
                 {/* Package Category & Tag */}
                 <div className="flex items-center justify-between mb-4">
-                  <span className="font-syne text-xs font-bold uppercase tracking-wider text-[#ff6b00]">
+                  <span className="font-syne text-xs font-bold uppercase tracking-wider text-[#17c2b3]">
                     {pkg.category}
                   </span>
                   {pkg.recommended && (
-                    <span className="text-[11px] font-syne font-bold bg-[#ff6b00] text-white px-2.5 py-0.5 rounded-full">
+                    <span className="text-[11px] font-syne font-bold bg-[#17c2b3] text-white px-2.5 py-0.5 rounded-full">
                       Primary Focus
                     </span>
                   )}
@@ -78,7 +78,7 @@ export function CapabilitiesPackages() {
                       key={idx}
                       className="text-sm font-manrope text-[#545b63] group-hover:text-white/90 transition-colors flex items-start gap-3"
                     >
-                      <span className="w-2 h-2 rounded-full bg-[#0f0e0e]/20 group-hover:bg-[#ff6b00] shrink-0 mt-1.5 transition-colors" />
+                      <span className="w-2 h-2 rounded-full bg-[#0f0e0e]/20 group-hover:bg-[#17c2b3] shrink-0 mt-1.5 transition-colors" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -88,7 +88,7 @@ export function CapabilitiesPackages() {
               {/* Action Button */}
               <Link
                 href="/#contact"
-                className="w-full py-3 px-6 rounded border border-[#0f0e0e] group-hover:border-[#ff6b00] bg-transparent group-hover:bg-[#ff6b00] text-[#0f0e0e] group-hover:text-white font-syne font-bold text-center text-sm flex items-center justify-center gap-2 transition-all duration-300"
+                className="w-full py-3 px-6 rounded border border-[#0f0e0e] group-hover:border-[#17c2b3] bg-transparent group-hover:bg-[#17c2b3] text-[#0f0e0e] group-hover:text-white font-syne font-bold text-center text-sm flex items-center justify-center gap-2 transition-all duration-300"
               >
                 <span>Discuss Expertise</span>
                 <ArrowUpRight size={16} />

@@ -56,7 +56,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn("antialiased scroll-smooth", headingFont.variable, manrope.variable)}
     >
-      <body className="font-sans bg-white text-[#0f0e0e] selection:bg-[#ff6b00] selection:text-white">
+      <body className="font-sans bg-white text-[#0f0e0e] selection:bg-[#17c2b3] selection:text-white">
         <ThemeProvider>
           <SmoothScroll>{children}</SmoothScroll>
         </ThemeProvider>

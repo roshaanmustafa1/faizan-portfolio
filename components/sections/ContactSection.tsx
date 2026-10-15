@@ -56,11 +56,11 @@ export function ContactSection() {
                   <span className="font-syne font-bold text-2xl sm:text-4xl text-white uppercase px-6">
                     {PORTFOLIO_DATA.personal.phoneDisplay}
                   </span>
-                  <span className="text-[#ff6b00] font-syne text-xl sm:text-3xl px-2">_</span>
+                  <span className="text-[#17c2b3] font-syne text-xl sm:text-3xl px-2">_</span>
                   <span className="font-syne font-bold text-2xl sm:text-4xl text-stroke-white uppercase px-6">
                     Lahore, Pakistan
                   </span>
-                  <span className="text-[#ff6b00] font-syne text-xl sm:text-3xl px-4">•</span>
+                  <span className="text-[#17c2b3] font-syne text-xl sm:text-3xl px-4">•</span>
                 </span>
               ))}
             </div>
@@ -73,7 +73,7 @@ export function ContactSection() {
           {/* Left Column: Form & Heading */}
           <div className="lg:col-span-7 space-y-8">
             <div>
-              <span className="text-xs font-syne font-bold uppercase tracking-widest text-[#ff6b00] block mb-2">
+              <span className="text-xs font-syne font-bold uppercase tracking-widest text-[#17c2b3] block mb-2">
                 Get In Touch
               </span>
               <h2 className="font-syne font-extrabold text-5xl sm:text-7xl lg:text-8xl text-white leading-[1.05] tracking-tight">
@@ -88,20 +88,20 @@ export function ContactSection() {
             <div className="flex flex-wrap items-center gap-4 py-2">
               <a
                 href={`mailto:${PORTFOLIO_DATA.personal.email}`}
-                className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm text-white hover:border-[#ff6b00] hover:text-[#ff6b00] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm text-white hover:border-[#17c2b3] hover:text-[#17c2b3] transition-colors"
               >
-                <Mail size={16} className="text-[#ff6b00]" />
+                <Mail size={16} className="text-[#17c2b3]" />
                 <span>{PORTFOLIO_DATA.personal.email}</span>
               </a>
               <a
                 href={`tel:${PORTFOLIO_DATA.personal.phone}`}
-                className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm text-white hover:border-[#ff6b00] hover:text-[#ff6b00] transition-colors"
+                className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm text-white hover:border-[#17c2b3] hover:text-[#17c2b3] transition-colors"
               >
-                <Phone size={16} className="text-[#ff6b00]" />
+                <Phone size={16} className="text-[#17c2b3]" />
                 <span>{PORTFOLIO_DATA.personal.phoneDisplay}</span>
               </a>
               <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm text-white/80">
-                <MapPin size={16} className="text-[#ff6b00]" />
+                <MapPin size={16} className="text-[#17c2b3]" />
                 <span>Lahore, Pakistan</span>
               </span>
             </div>
@@ -143,7 +143,7 @@ export function ContactSection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="email" className="block text-xs font-syne font-bold uppercase text-white/80 mb-2">
-                    Email <span className="text-[#ff6b00]">*</span>
+                    Email <span className="text-[#17c2b3]">*</span>
                   </label>
                   <input
                     type="email"
@@ -173,7 +173,7 @@ export function ContactSection() {
 
               <div>
                 <label htmlFor="message" className="block text-xs font-syne font-bold uppercase text-white/80 mb-2">
-                  Message <span className="text-[#ff6b00]">*</span>
+                  Message <span className="text-[#17c2b3]">*</span>
                 </label>
                 <textarea
                   id="message"
@@ -197,8 +197,8 @@ export function ContactSection() {
               </div>
 
               {submitted && (
-                <div className="p-4 rounded-lg bg-white/10 border border-[#ff6b00]/50 text-xs text-white/90 flex items-start gap-2 animate-in fade-in">
-                  <CheckCircle2 size={16} className="text-[#ff6b00] shrink-0 mt-0.5" />
+                <div className="p-4 rounded-lg bg-white/10 border border-[#17c2b3]/50 text-xs text-white/90 flex items-start gap-2 animate-in fade-in">
+                  <CheckCircle2 size={16} className="text-[#17c2b3] shrink-0 mt-0.5" />
                   <span>
                     Your default email client has been prepared with your message addressed to <strong>{PORTFOLIO_DATA.personal.email}</strong>.
                   </span>
@@ -214,12 +214,12 @@ export function ContactSection() {
                 <Link
                   key={item.num}
                   href={item.href}
-                  className="group py-4 sm:py-5 flex items-center justify-between transition-colors hover:text-[#ff6b00]"
+                  className="group py-4 sm:py-5 flex items-center justify-between transition-colors hover:text-[#17c2b3]"
                 >
                   <span className="font-syne font-bold text-xl sm:text-2xl text-white/80 group-hover:text-white transition-colors">
                     {item.name}
                   </span>
-                  <span className="font-syne font-bold text-sm text-[#ff6b00]/80 group-hover:text-[#ff6b00] transition-colors">
+                  <span className="font-syne font-bold text-sm text-[#17c2b3]/80 group-hover:text-[#17c2b3] transition-colors">
                     {item.num}
                   </span>
                 </Link>

@@ -23,11 +23,11 @@ export function PageBanner({ title, subtitle, breadcrumb }: PageBannerProps) {
           </p>
         )}
         <div className="flex items-center justify-center gap-2 font-syne text-sm font-bold text-[#545b63]">
-          <Link href="/" className="hover:text-[#ff6b00] transition-colors">
+          <Link href="/" className="hover:text-[#17c2b3] transition-colors">
             Home
           </Link>
-          <ChevronRight size={14} className="text-[#ff6b00]" />
-          <span className="text-[#ff6b00]">{breadcrumb}</span>
+          <ChevronRight size={14} className="text-[#17c2b3]" />
+          <span className="text-[#17c2b3]">{breadcrumb}</span>
         </div>
       </div>
     </div>

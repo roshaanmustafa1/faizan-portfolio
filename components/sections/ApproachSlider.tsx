@@ -38,7 +38,7 @@ export function ApproachSlider() {
               className="w-full h-auto object-contain"
             />
           </div>
-          <span className="font-syne font-bold text-xs uppercase tracking-widest text-[#ff6b00]">
+          <span className="font-syne font-bold text-xs uppercase tracking-widest text-[#17c2b3]">
             Operational Philosophy & Standards
           </span>
         </div>
@@ -47,7 +47,7 @@ export function ApproachSlider() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           {/* Main Statement Content */}
           <div className="lg:col-span-8 space-y-6">
-            <div className="inline-block px-3 py-1 rounded bg-[#f3f3f3] text-xs font-syne font-bold text-[#ff6b00] uppercase tracking-wider">
+            <div className="inline-block px-3 py-1 rounded bg-[#f3f3f3] text-xs font-syne font-bold text-[#17c2b3] uppercase tracking-wider">
               {current.role}
             </div>
 
@@ -72,7 +72,7 @@ export function ApproachSlider() {
                 </button>
                 <button
                   onClick={handleNext}
-                  className="w-12 h-12 rounded-full border border-black/10 bg-[#0f0e0e] hover:bg-[#ff6b00] text-white flex items-center justify-center transition-all shadow-sm cursor-pointer"
+                  className="w-12 h-12 rounded-full border border-black/10 bg-[#0f0e0e] hover:bg-[#17c2b3] text-white flex items-center justify-center transition-all shadow-sm cursor-pointer"
                   aria-label="Next approach"
                 >
                   <ArrowRight size={18} />
@@ -86,13 +86,13 @@ export function ApproachSlider() {
             <div className="relative w-full max-w-[340px] aspect-[4/5] rounded-2xl overflow-hidden shadow-xl border border-black/10 bg-[#f3f3f3]">
               <Image
                 src={current.image}
-                alt={current.title}
+                alt="Faizan Karamat, Medical Billing and RCM Specialist"
                 fill
                 className="object-cover transition-all duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-white">
-                <span className="text-xs font-syne font-bold uppercase tracking-wider text-[#ff6b00]">
+                <span className="text-xs font-syne font-bold uppercase tracking-wider text-[#17c2b3]">
                   Core Standard
                 </span>
                 <div className="font-syne font-bold text-lg text-white mt-1">

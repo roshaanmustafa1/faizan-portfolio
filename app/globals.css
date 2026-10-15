@@ -5,7 +5,7 @@
 @layer theme {
   :root {
     --clr-black: #0f0e0e;
-    --clr-orange: #ff6b00;
+    --clr-orange: #17c2b3;
     --clr-white: #ffffff;
     --clr-gray: #545b63;
     --clr-light-gray: #f3f3f3;
@@ -22,7 +22,7 @@
   --ff-syne: var(--ff-heading);
   --ff-manrope: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --clr-black: #0f0e0e;
-  --clr-orange: #ff6b00;
+  --clr-orange: #17c2b3;
   --clr-white: #ffffff;
   --clr-gray: #545b63;
   --clr-light-gray: #f3f3f3;

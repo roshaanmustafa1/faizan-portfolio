@@ -31,8 +31,8 @@ export function Header() {
             {/* Logo */}
             <div className="flex items-center h-full xl:border-r xl:border-black/10 xl:pl-8 xl:pr-8">
               <Link href="/" className="group flex items-center">
-                <span className="font-syne font-bold text-lg sm:text-xl xl:text-2xl tracking-tight text-[#0f0e0e] group-hover:text-[#ff6b00] transition-colors">
-                  FAIZAN <span className="text-[#ff6b00] group-hover:text-[#0f0e0e] transition-colors">K</span>ARAMAT
+                <span className="font-syne font-bold text-lg sm:text-xl xl:text-2xl tracking-tight text-[#0f0e0e] group-hover:text-[#17c2b3] transition-colors">
+                  FAIZAN <span className="text-[#17c2b3] group-hover:text-[#0f0e0e] transition-colors">K</span>ARAMAT
                 </span>
               </Link>
             </div>
@@ -46,7 +46,7 @@ export function Header() {
                     key={link.name}
                     href={link.href}
                     className={`font-syne text-[15px] xl:text-[16px] font-bold tracking-tight transition-colors duration-200 py-2 relative ${
-                      isActive ? "text-[#ff6b00]" : "text-[#0f0e0e] hover:text-[#ff6b00]"
+                      isActive ? "text-[#17c2b3]" : "text-[#0f0e0e] hover:text-[#17c2b3]"
                     }`}
                   >
                     {link.name}
@@ -60,7 +60,7 @@ export function Header() {
               {/* Let's Talk CTA */}
               <Link
                 href="/#contact"
-                className="hidden xl:flex items-center gap-2 h-full px-8 xl:px-10 border-l border-black/10 font-syne font-bold text-[16px] text-[#0f0e0e] hover:text-[#ff6b00] transition-colors group"
+                className="hidden xl:flex items-center gap-2 h-full px-8 xl:px-10 border-l border-black/10 font-syne font-bold text-[16px] text-[#0f0e0e] hover:text-[#17c2b3] transition-colors group"
               >
                 <span>Let&apos;s Talk</span>
                 <ArrowUpRight
@@ -72,7 +72,7 @@ export function Header() {
               {/* Offcanvas Drawer Trigger Button */}
               <button
                 onClick={() => setIsOffcanvasOpen(true)}
-                className="hidden lg:flex w-[80px] xl:w-[110px] h-full bg-[#0f0e0e] text-white items-center justify-center hover:bg-[#ff6b00] transition-colors cursor-pointer"
+                className="hidden lg:flex w-[80px] xl:w-[110px] h-full bg-[#0f0e0e] text-white items-center justify-center hover:bg-[#17c2b3] transition-colors cursor-pointer"
                 aria-label="Open side drawer"
               >
                 <div className="space-y-1.5 flex flex-col items-center justify-center">
@@ -85,7 +85,7 @@ export function Header() {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden ml-3 p-2 text-[#0f0e0e] hover:text-[#ff6b00] transition-colors"
+                className="lg:hidden ml-3 p-2 text-[#0f0e0e] hover:text-[#17c2b3] transition-colors"
                 aria-label="Toggle navigation"
                 aria-expanded={isMobileMenuOpen}
                 aria-controls="mobile-navigation"
@@ -105,7 +105,7 @@ export function Header() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="font-syne font-bold text-lg text-[#0f0e0e] hover:text-[#ff6b00] py-1 border-b border-black/5"
+                  className="font-syne font-bold text-lg text-[#0f0e0e] hover:text-[#17c2b3] py-1 border-b border-black/5"
                 >
                   {link.name}
                 </Link>

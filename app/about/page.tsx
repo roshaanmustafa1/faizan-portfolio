@@ -45,7 +45,7 @@ export default function AboutPage() {
                   </div>
                   <div className="p-6 bg-[#0f0e0e] text-white">
                     <h3 className="font-syne font-bold text-2xl text-white">Faizan Karamat</h3>
-                    <p className="text-xs font-semibold text-[#ff6b00] uppercase tracking-wider mt-1">
+                    <p className="text-xs font-semibold text-[#17c2b3] uppercase tracking-wider mt-1">
                       {PORTFOLIO_DATA.personal.currentPosition}
                     </p>
                     <p className="text-xs text-white/70 mt-1">
@@ -74,7 +74,7 @@ export default function AboutPage() {
               {/* Bio & Deep Dive */}
               <div className="lg:col-span-7 space-y-8">
                 <div>
-                  <span className="text-xs font-syne font-bold uppercase tracking-widest text-[#ff6b00] block mb-2">
+                  <span className="text-xs font-syne font-bold uppercase tracking-widest text-[#17c2b3] block mb-2">
                     Professional Biography
                   </span>
                   <h2 className="font-syne font-bold text-3xl sm:text-4xl text-[#0f0e0e] leading-tight">
@@ -93,7 +93,7 @@ export default function AboutPage() {
                 {/* Key Career Highlights */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                   <div className="p-5 rounded-xl border border-black/10 bg-white">
-                    <Calendar className="w-6 h-6 text-[#ff6b00] mb-2" />
+                    <Calendar className="w-6 h-6 text-[#17c2b3] mb-2" />
                     <h4 className="font-syne font-bold text-lg text-[#0f0e0e]">5+ Years in RCM</h4>
                     <p className="text-xs text-[#545b63] mt-1 font-manrope">
                       Dedicated career progression in U.S. medical billing workflows.
@@ -101,7 +101,7 @@ export default function AboutPage() {
                   </div>
 
                   <div className="p-5 rounded-xl border border-black/10 bg-white">
-                    <Building2 className="w-6 h-6 text-[#ff6b00] mb-2" />
+                    <Building2 className="w-6 h-6 text-[#17c2b3] mb-2" />
                     <h4 className="font-syne font-bold text-lg text-[#0f0e0e]">F&A Global, PRG & CureMD</h4>
                     <p className="text-xs text-[#545b63] mt-1 font-manrope">
                       Proven track record across leading healthcare operations organizations.
@@ -111,11 +111,11 @@ export default function AboutPage() {
 
                 {/* Education Section */}
                 <div className="pt-6 border-t border-black/10">
-                  <span className="text-xs font-syne font-bold uppercase tracking-widest text-[#ff6b00] block mb-3">
+                  <span className="text-xs font-syne font-bold uppercase tracking-widest text-[#17c2b3] block mb-3">
                     Academic Background
                   </span>
                   <div className="p-6 rounded-2xl bg-[#f3f3f3] border border-black/10 flex items-start gap-4">
-                    <GraduationCap className="w-8 h-8 text-[#ff6b00] shrink-0 mt-1" />
+                    <GraduationCap className="w-8 h-8 text-[#17c2b3] shrink-0 mt-1" />
                     <div>
                       <h4 className="font-syne font-bold text-xl text-[#0f0e0e]">
                         {PORTFOLIO_DATA.education[0].degree}
@@ -124,7 +124,7 @@ export default function AboutPage() {
                         {PORTFOLIO_DATA.education[0].institution} • {PORTFOLIO_DATA.education[0].location}
                       </div>
                       <div className="flex items-center gap-4 mt-2">
-                        <span className="text-xs font-syne font-bold text-[#ff6b00] bg-white px-2.5 py-0.5 rounded">
+                        <span className="text-xs font-syne font-bold text-[#17c2b3] bg-white px-2.5 py-0.5 rounded">
                           CGPA: {PORTFOLIO_DATA.education[0].cgpa}
                         </span>
                         <span className="text-xs text-[#545b63]">

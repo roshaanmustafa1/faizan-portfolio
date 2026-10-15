@@ -20,7 +20,7 @@ export function MarqueeSection() {
               >
                 {item}
               </span>
-              <span className="text-[#ff6b00] font-syne font-bold text-2xl sm:text-4xl px-2">
+              <span className="text-[#17c2b3] font-syne font-bold text-2xl sm:text-4xl px-2">
                 •
               </span>
             </span>
@@ -38,7 +38,7 @@ export function MarqueeSection() {
               >
                 {item}
               </span>
-              <span className="text-[#ff6b00] font-syne font-bold text-2xl sm:text-4xl px-2">
+              <span className="text-[#17c2b3] font-syne font-bold text-2xl sm:text-4xl px-2">
                 •
               </span>
             </span>

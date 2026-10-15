@@ -16,8 +16,8 @@ const destPath = path.join(resumeDir, 'faizan-karamat-resume.pdf');
 const stream = fs.createWriteStream(destPath);
 doc.pipe(stream);
 
-const primaryColor = '#0F0E0E';
-const accentColor = '#FF6B00';
+const primaryColor = '#0f0e0e';
+const accentColor = '#17c2b3';
 const textColor = '#333333';
 const mutedColor = '#545B63';
 

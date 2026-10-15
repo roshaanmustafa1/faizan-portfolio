@@ -203,7 +203,7 @@ export const PORTFOLIO_DATA = {
       category: "Accounts Receivable",
       description:
         "Proactive management of outstanding balances, comprehensive insurance collections, and prioritization of aging accounts across commercial and government payers.",
-      image: "/images/projects/project-1.png",
+      image: "/images/medical-billing/ar-analytics.png",
       size: "big",
       details: [
         "Rigorous follow-up on 30/60/90/120+ day aging accounts",
@@ -218,7 +218,7 @@ export const PORTFOLIO_DATA = {
       category: "Claims",
       description:
         "Systematic verification of claim statuses, payer timely-filing monitoring, and continuous engagement with insurance representatives.",
-      image: "/images/projects/project-2.png",
+      image: "/images/medical-billing/claims-processing.png",
       size: "mid",
       details: [
         "Automated and manual portal verification across major U.S. payers",
@@ -233,7 +233,7 @@ export const PORTFOLIO_DATA = {
       category: "Denials",
       description:
         "Structured diagnosis of denial reason codes (CARC/RARC), claim correction, appeal packet assembly, and error mitigation.",
-      image: "/images/projects/project-3.png",
+      image: "/images/medical-billing/claims-processing.png",
       size: "normal",
       details: [
         "In-depth investigation of eligibility, authorization, and coding denials",
@@ -248,7 +248,7 @@ export const PORTFOLIO_DATA = {
       category: "Operations",
       description:
         "End-to-end reconciliation of electronic remittance advices (ERA) and explanation of benefits (EOB) ensuring maximal reimbursement capture.",
-      image: "/images/projects/project-4.png",
+      image: "/images/medical-billing/payment-reconciliation.png",
       size: "normal",
       details: [
         "ERA/EFT payment posting reconciliation against billed charges",
@@ -263,7 +263,7 @@ export const PORTFOLIO_DATA = {
       category: "Operations",
       description:
         "Multi-disciplinary coordination across demographic entry, charge capture, clearinghouse scrubbing, and operational standards.",
-      image: "/images/projects/project-5.png",
+      image: "/images/medical-billing/claims-processing.png",
       size: "normal",
       details: [
         "Clearinghouse front-end edit resolution and EDI batch tracking",
@@ -278,7 +278,7 @@ export const PORTFOLIO_DATA = {
       category: "Accounts Receivable",
       description:
         "Data-driven AR portfolio auditing and customized reporting in Microsoft Excel to isolate delinquent payer trends and forecast cash flows.",
-      image: "/images/projects/project-1.png",
+      image: "/images/medical-billing/ar-analytics.png",
       size: "big",
       details: [
         "Cohort analysis of delinquent claims categorized by payer and facility",
@@ -354,7 +354,7 @@ export const PORTFOLIO_DATA = {
       subtitle: "The Foundation of Zero-Error Billing",
       description:
         "Medical billing leaves no margin for assumptions. Every patient record, modifier, authorization number, and diagnostic code is meticulously cross-referenced prior to clearinghouse transmission to ensure maximum first-pass clean claim rates.",
-      image: "/images/testimonial/image1.png",
+      image: "/images/faizan-karamat.png",
       author: "Faizan Karamat",
       role: "Methodology Principle #1",
     },
@@ -364,7 +364,7 @@ export const PORTFOLIO_DATA = {
       subtitle: "Preventing Aging Slip & Payer Delays",
       description:
         "Unpaid claims do not resolve themselves. I implement disciplined, cadence-driven follow-up cycles across web portals and payer representative lines, actively preventing accounts from slipping into delinquent aging tiers.",
-      image: "/images/testimonial/image2.png",
+      image: "/images/faizan-karamat.png",
       author: "Faizan Karamat",
       role: "Methodology Principle #2",
     },
@@ -374,7 +374,7 @@ export const PORTFOLIO_DATA = {
       subtitle: "Fixing Upstream Causes, Not Just Symptoms",
       description:
         "Rather than repeatedly patching rejected claims, my approach isolates the root cause—whether patient demographic capture, pre-authorization omission, or coding conflict—and builds preventative operational safeguards.",
-      image: "/images/testimonial/image3.png",
+      image: "/images/faizan-karamat.png",
       author: "Faizan Karamat",
       role: "Methodology Principle #3",
     },
@@ -384,7 +384,7 @@ export const PORTFOLIO_DATA = {
       subtitle: "Data-Driven Transparency & KPI Accountability",
       description:
         "High-performance RCM relies on operational visibility. Through structured Excel reporting, daily productivity benchmarks, and clear delegation, team members stay focused on high-priority accounts that drive healthy cash flow.",
-      image: "/images/testimonial/image1.png",
+      image: "/images/faizan-karamat.png",
       author: "Faizan Karamat",
       role: "Methodology Principle #4",
     },
@@ -538,7 +538,7 @@ export const PORTFOLIO_DATA = {
       category: "Accounts Receivable",
       excerpt:
         "A breakdown of how disciplined AR tracking, aging bucket categorization, and prompt payer follow-up preserve liquidity for healthcare organizations.",
-      image: "/images/blogs/blog-thumbnail.png",
+      image: "/images/medical-billing/ar-analytics.png",
       content: [
         "Accounts Receivable (AR) in medical billing represents the revenue due to healthcare providers for medical services delivered to patients. In the U.S. healthcare landscape, managing AR is one of the most vital determinants of a medical practice's financial vitality.",
         "Healthcare AR differs markedly from traditional commercial billing because of complex third-party payer relationships, pre-authorization mandates, coordination of benefits, and stringent timely-filing windows. When claims linger beyond 60 or 90 days, the statistical probability of full payment collection drops precipitously.",
@@ -556,7 +556,7 @@ export const PORTFOLIO_DATA = {
       category: "Denial Management",
       excerpt:
         "Analyzing why claim denials occur, the significance of CARC/RARC codes, and how systematic appeals recover hard-earned medical practice revenue.",
-      image: "/images/blogs/blog-thumbnail.png",
+      image: "/images/medical-billing/claims-processing.png",
       content: [
         "Claim denials are among the most expensive disruptions in healthcare revenue cycles. Industry studies indicate that upwards of 15% to 20% of claims are initially rejected or denied by commercial and government payers, representing billions in uncollected revenue annually.",
         "The most prevalent denial catalysts include demographic data discrepancies, inactive patient coverage on the date of service, absence of required prior authorization, medical necessity challenges, and non-compliance with payer-specific modifier requirements.",
@@ -574,7 +574,7 @@ export const PORTFOLIO_DATA = {
       category: "Claims Management",
       excerpt:
         "Why passive submission fails in U.S. billing, and how active payer engagement prevents write-offs caused by missed timely-filing deadlines.",
-      image: "/images/blogs/blog-thumbnail.png",
+      image: "/images/medical-billing/payment-reconciliation.png",
       content: [
         "Submitting a claim through a clearinghouse is only the initial step of the reimbursement journey. Without proactive insurance claim follow-up, dozens of claims remain unadjudicated in payer processing queues until statutory timely filing deadlines expire.",
         "Timely filing limits vary dramatically across payers: Medicare typically allows 12 calendar months, while certain commercial insurers like Aetna or UnitedHealthcare contractually enforce 90 to 180-day limits from the date of service.",
@@ -592,7 +592,7 @@ export const PORTFOLIO_DATA = {
       category: "Operations",
       excerpt:
         "How operational dashboards, Excel cohort analysis, and team task allocation boost billing productivity and collection ratios.",
-      image: "/images/blogs/blog-thumbnail.png",
+      image: "/images/medical-billing/ar-analytics.png",
       content: [
         "In complex multi-specialty billing environments, operational opacity is the enemy of revenue maximization. When team leaders lack real-time visibility into claim pipelines, accounts age silently and denial trends go unnoticed for weeks.",
         "Building visibility requires establishing key performance indicators (KPIs) such as Clean Claim Rate, Days in AR, Gross and Net Collection Ratios, and Denial Rate percentage by payer.",

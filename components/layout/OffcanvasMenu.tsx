@@ -33,7 +33,7 @@ export function OffcanvasMenu({ isOpen, onClose }: OffcanvasMenuProps) {
           <div className="flex justify-end mb-6">
             <button
               onClick={onClose}
-              className="w-10 h-10 bg-[#0f0e0e] text-white rounded-md flex items-center justify-center hover:bg-[#ff6b00] transition-colors"
+              className="w-10 h-10 bg-[#0f0e0e] text-white rounded-md flex items-center justify-center hover:bg-[#17c2b3] transition-colors"
               aria-label="Close menu"
             >
               <X size={20} />
@@ -43,7 +43,7 @@ export function OffcanvasMenu({ isOpen, onClose }: OffcanvasMenuProps) {
           {/* Logo */}
           <div className="mb-6">
             <Link href="/" onClick={onClose} className="font-syne font-bold text-2xl tracking-tight text-[#0f0e0e]">
-              FAIZAN <span className="text-[#ff6b00]">K</span>ARAMAT
+              FAIZAN <span className="text-[#17c2b3]">K</span>ARAMAT
             </Link>
             <p className="text-xs font-semibold text-[#545b63] uppercase tracking-wider mt-1">
               RCM & Medical Billing Specialist
@@ -63,7 +63,7 @@ export function OffcanvasMenu({ isOpen, onClose }: OffcanvasMenuProps) {
                 <MapPin size={16} />
               </div>
               <div>
-                <span className="text-xs uppercase font-syne font-bold text-[#ff6b00] block">Address</span>
+                <span className="text-xs uppercase font-syne font-bold text-[#17c2b3] block">Address</span>
                 <span className="text-sm font-medium text-[#0f0e0e]">{PORTFOLIO_DATA.personal.location}</span>
               </div>
             </div>
@@ -73,10 +73,10 @@ export function OffcanvasMenu({ isOpen, onClose }: OffcanvasMenuProps) {
                 <Mail size={16} />
               </div>
               <div>
-                <span className="text-xs uppercase font-syne font-bold text-[#ff6b00] block">Email</span>
+                <span className="text-xs uppercase font-syne font-bold text-[#17c2b3] block">Email</span>
                 <a
                   href={`mailto:${PORTFOLIO_DATA.personal.email}`}
-                  className="text-sm font-medium text-[#0f0e0e] hover:text-[#ff6b00] transition-colors break-all"
+                  className="text-sm font-medium text-[#0f0e0e] hover:text-[#17c2b3] transition-colors break-all"
                 >
                   {PORTFOLIO_DATA.personal.email}
                 </a>
@@ -88,10 +88,10 @@ export function OffcanvasMenu({ isOpen, onClose }: OffcanvasMenuProps) {
                 <Phone size={16} />
               </div>
               <div>
-                <span className="text-xs uppercase font-syne font-bold text-[#ff6b00] block">Call Now</span>
+                <span className="text-xs uppercase font-syne font-bold text-[#17c2b3] block">Call Now</span>
                 <a
                   href={`tel:${PORTFOLIO_DATA.personal.phone}`}
-                  className="text-sm font-medium text-[#0f0e0e] hover:text-[#ff6b00] transition-colors"
+                  className="text-sm font-medium text-[#0f0e0e] hover:text-[#17c2b3] transition-colors"
                 >
                   {PORTFOLIO_DATA.personal.phoneDisplay}
                 </a>
@@ -107,14 +107,14 @@ export function OffcanvasMenu({ isOpen, onClose }: OffcanvasMenuProps) {
                 href={PORTFOLIO_DATA.personal.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="w-10 h-10 rounded-full bg-[#0f0e0e] text-white flex items-center justify-center hover:bg-[#ff6b00] transition-colors"
+                className="w-10 h-10 rounded-full bg-[#0f0e0e] text-white flex items-center justify-center hover:bg-[#17c2b3] transition-colors"
                 aria-label="LinkedIn Profile"
               >
                 <LinkedInIcon size={18} />
               </a>
               <a
                 href={`mailto:${PORTFOLIO_DATA.personal.email}`}
-                className="w-10 h-10 rounded-full bg-[#0f0e0e] text-white flex items-center justify-center hover:bg-[#ff6b00] transition-colors"
+                className="w-10 h-10 rounded-full bg-[#0f0e0e] text-white flex items-center justify-center hover:bg-[#17c2b3] transition-colors"
                 aria-label="Send Email"
               >
                 <Mail size={18} />
@@ -128,7 +128,7 @@ export function OffcanvasMenu({ isOpen, onClose }: OffcanvasMenuProps) {
           <Link
             href="/#contact"
             onClick={onClose}
-            className="w-full bg-[#ff6b00] text-white py-3.5 px-6 rounded font-syne font-bold text-center flex items-center justify-center gap-2 hover:bg-[#d55b04] transition-colors shadow-md"
+            className="w-full bg-[#17c2b3] text-white py-3.5 px-6 rounded font-syne font-bold text-center flex items-center justify-center gap-2 hover:bg-[#d55b04] transition-colors shadow-md"
           >
             <span>Let&apos;s Talk</span>
             <ArrowUpRight size={18} />

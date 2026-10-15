@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowUpRight, Calendar, Clock, X, BookOpen } from "lucide-react";
 import { PORTFOLIO_DATA, InsightArticle } from "@/data/portfolio";
 
@@ -37,14 +36,14 @@ export function InsightsSection() {
                 >
                   {/* Article Title & Category */}
                   <div className="max-w-3xl">
-                    <span className="text-xs font-syne font-bold uppercase tracking-wider text-[#ff6b00] block mb-2">
+                    <span className="text-xs font-syne font-bold uppercase tracking-wider text-[#17c2b3] block mb-2">
                       {article.category} • {article.readTime}
                     </span>
                     <h4
                       className={`font-syne font-bold text-2xl sm:text-3xl lg:text-4xl transition-colors leading-tight ${
                         isActive
-                          ? "text-[#ff6b00] underline decoration-[#ff6b00] underline-offset-8"
-                          : "text-[#0f0e0e] group-hover:text-[#ff6b00]"
+                          ? "text-[#17c2b3] underline decoration-[#17c2b3] underline-offset-8"
+                          : "text-[#0f0e0e] group-hover:text-[#17c2b3]"
                       }`}
                     >
                       {article.title}
@@ -56,11 +55,11 @@ export function InsightsSection() {
 
                   {/* Date Box (matching Textio date widget) */}
                   <div className="flex md:flex-col items-center md:items-end justify-between md:justify-center shrink-0">
-                    <div className="w-24 h-20 border border-black/10 rounded-lg bg-[#f3f3f3] flex flex-col items-center justify-center text-center p-2 group-hover:border-[#ff6b00] transition-colors">
+                    <div className="w-24 h-20 border border-black/10 rounded-lg bg-[#f3f3f3] flex flex-col items-center justify-center text-center p-2 group-hover:border-[#17c2b3] transition-colors">
                       <span className="font-syne font-bold text-2xl text-[#0f0e0e] leading-none">
                         {article.date}/
                       </span>
-                      <span className="font-syne text-xs uppercase font-bold text-[#ff6b00] tracking-wider mt-1">
+                      <span className="font-syne text-xs uppercase font-bold text-[#17c2b3] tracking-wider mt-1">
                         {article.month}
                       </span>
                     </div>
@@ -82,7 +81,7 @@ export function InsightsSection() {
                     <div className="absolute inset-0 flex items-center justify-center">
                       <button
                         onClick={() => setReadingArticle(article)}
-                        className="w-24 h-24 rounded-full bg-[#ff6b00] text-white flex flex-col items-center justify-center font-syne font-bold text-xs uppercase tracking-wider hover:bg-white hover:text-[#0f0e0e] transition-all shadow-2xl cursor-pointer"
+                        className="w-24 h-24 rounded-full bg-[#17c2b3] text-white flex flex-col items-center justify-center font-syne font-bold text-xs uppercase tracking-wider hover:bg-white hover:text-[#0f0e0e] transition-all shadow-2xl cursor-pointer"
                       >
                         <span>Read</span>
                         <ArrowUpRight size={18} />
@@ -90,7 +89,7 @@ export function InsightsSection() {
                     </div>
 
                     <div className="absolute bottom-6 left-6 right-6 text-white">
-                      <div className="text-xs font-syne font-bold text-[#ff6b00] uppercase tracking-wider mb-1">
+                      <div className="text-xs font-syne font-bold text-[#17c2b3] uppercase tracking-wider mb-1">
                         Educational Guide
                       </div>
                       <div className="font-syne font-bold text-lg sm:text-xl line-clamp-1">
@@ -104,15 +103,6 @@ export function InsightsSection() {
           })}
         </div>
 
-        {/* View All CTA */}
-        <div className="mt-16 text-center">
-          <Link href="/insights" className="bttn-round">
-            <span className="font-syne text-sm font-bold">All Insights</span>
-            <span className="text-xs text-[#ff6b00] uppercase tracking-wider flex items-center gap-1">
-              Read <ArrowUpRight size={14} />
-            </span>
-          </Link>
-        </div>
       </div>
 
       {/* Full Educational Article Modal */}
@@ -129,13 +119,13 @@ export function InsightsSection() {
             <div className="p-6 sm:p-8 bg-[#0f0e0e] text-white relative">
               <button
                 onClick={() => setReadingArticle(null)}
-                className="absolute top-6 right-6 w-9 h-9 rounded-full bg-white/10 hover:bg-[#ff6b00] text-white flex items-center justify-center transition-colors cursor-pointer"
+                className="absolute top-6 right-6 w-9 h-9 rounded-full bg-white/10 hover:bg-[#17c2b3] text-white flex items-center justify-center transition-colors cursor-pointer"
                 aria-label="Close article"
               >
                 <X size={20} />
               </button>
 
-              <div className="flex items-center gap-3 text-xs font-syne font-bold uppercase tracking-wider text-[#ff6b00] mb-3">
+              <div className="flex items-center gap-3 text-xs font-syne font-bold uppercase tracking-wider text-[#17c2b3] mb-3">
                 <span>{readingArticle.category}</span>
                 <span>•</span>
                 <span>{readingArticle.readTime}</span>
@@ -159,7 +149,7 @@ export function InsightsSection() {
               ))}
 
               {/* Disclaimer */}
-              <div className="p-4 bg-[#f3f3f3] rounded-xl text-xs text-[#545b63] border-l-4 border-[#ff6b00]">
+              <div className="p-4 bg-[#f3f3f3] rounded-xl text-xs text-[#545b63] border-l-4 border-[#17c2b3]">
                 <strong>Note:</strong> This article is authored as educational professional commentary on U.S. Healthcare Revenue Cycle Management workflows.
               </div>
             </div>

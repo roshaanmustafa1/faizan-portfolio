@@ -1,0 +1,11 @@
+.viewport:global(.swiper) { width: 100%; height: auto; max-width: 1736px; margin: 0 auto; padding: 24px 0; overflow: hidden; }
+.viewport :global(.swiper-wrapper) { transition-timing-function: linear !important; }
+.viewport :global(.swiper-slide) { width: 196px; height: auto; flex-shrink: 0; }
+.card { transition: transform 250ms ease, box-shadow 250ms ease; }
+@media (hover: hover) {
+  .card:hover { transform: translateY(-6px); box-shadow: 0 10px 18px -8px rgb(15 14 14 / 16%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card { transition: none; }
+  .card:hover { transform: none; }
+}
