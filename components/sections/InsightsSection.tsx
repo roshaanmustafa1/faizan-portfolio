@@ -1,106 +1,34 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
-import { ArrowUpRight, Calendar, Clock, X, BookOpen } from "lucide-react";
+import { X } from "lucide-react";
 import { PORTFOLIO_DATA, InsightArticle } from "@/data/portfolio";
+import { InsightCard } from "./InsightCard";
 
 export function InsightsSection() {
-  const [activeArticleId, setActiveArticleId] = useState<string>("insight-1");
   const [readingArticle, setReadingArticle] = useState<InsightArticle | null>(null);
 
   return (
-    <section id="insights" className="py-24 lg:py-36 bg-white relative z-10 overflow-hidden">
+    <section id="insights" aria-labelledby="insights-heading" className="py-16 lg:py-24 bg-white relative z-10">
       <div className="textio-container">
         {/* Section Title with Textio bar & dot */}
-        <div className="section-title mb-16">
-          <h3 className="font-syne font-bold text-4xl lg:text-5xl text-[#0f0e0e]">
+        <div className="mb-8 lg:mb-10">
+          <span className="block text-[11px] font-semibold uppercase tracking-[0.12em] text-[#17c2b3] mb-3">Knowledge &amp; Perspectives</span>
+          <h2 id="insights-heading" className="font-syne font-semibold text-3xl lg:text-4xl text-[#0f0e0e]">
             RCM Insights
-          </h3>
-          <span className="title-bar" />
+          </h2>
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-[#545b63]">Practical perspectives on medical billing, claims management, and healthcare revenue operations.</p>
         </div>
 
-        {/* Editorial Article Rows */}
-        <div className="divide-y divide-black/10 border-t border-black/10">
-          {PORTFOLIO_DATA.insights.map((article) => {
-            const isActive = activeArticleId === article.id;
-
-            return (
-              <div
-                key={article.id}
-                className="py-10 transition-all duration-300"
-              >
-                <div
-                  onClick={() => setActiveArticleId(isActive ? "" : article.id)}
-                  className="flex flex-col md:flex-row md:items-center justify-between gap-6 cursor-pointer group"
-                >
-                  {/* Article Title & Category */}
-                  <div className="max-w-3xl">
-                    <span className="text-xs font-syne font-bold uppercase tracking-wider text-[#17c2b3] block mb-2">
-                      {article.category} • {article.readTime}
-                    </span>
-                    <h4
-                      className={`font-syne font-bold text-2xl sm:text-3xl lg:text-4xl transition-colors leading-tight ${
-                        isActive
-                          ? "text-[#17c2b3] underline decoration-[#17c2b3] underline-offset-8"
-                          : "text-[#0f0e0e] group-hover:text-[#17c2b3]"
-                      }`}
-                    >
-                      {article.title}
-                    </h4>
-                    <p className="font-manrope text-sm text-[#545b63] mt-2 line-clamp-2">
-                      {article.excerpt}
-                    </p>
-                  </div>
-
-                  {/* Date Box (matching Textio date widget) */}
-                  <div className="flex md:flex-col items-center md:items-end justify-between md:justify-center shrink-0">
-                    <div className="w-24 h-20 border border-black/10 rounded-lg bg-[#f3f3f3] flex flex-col items-center justify-center text-center p-2 group-hover:border-[#17c2b3] transition-colors">
-                      <span className="font-syne font-bold text-2xl text-[#0f0e0e] leading-none">
-                        {article.date}/
-                      </span>
-                      <span className="font-syne text-xs uppercase font-bold text-[#17c2b3] tracking-wider mt-1">
-                        {article.month}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Expanded Thumbnail & Action */}
-                {isActive && (
-                  <div className="mt-8 relative rounded-2xl overflow-hidden aspect-[21/9] max-h-[420px] bg-[#0f0e0e] group animate-in slide-in-from-top-4 duration-400">
-                    <Image
-                      src={article.image}
-                      alt={article.title}
-                      fill
-                      className="object-cover opacity-60 group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-
-                    {/* Centered Read Article Button */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <button
-                        onClick={() => setReadingArticle(article)}
-                        className="w-24 h-24 rounded-full bg-[#17c2b3] text-white flex flex-col items-center justify-center font-syne font-bold text-xs uppercase tracking-wider hover:bg-white hover:text-[#0f0e0e] transition-all shadow-2xl cursor-pointer"
-                      >
-                        <span>Read</span>
-                        <ArrowUpRight size={18} />
-                      </button>
-                    </div>
-
-                    <div className="absolute bottom-6 left-6 right-6 text-white">
-                      <div className="text-xs font-syne font-bold text-[#17c2b3] uppercase tracking-wider mb-1">
-                        Educational Guide
-                      </div>
-                      <div className="font-syne font-bold text-lg sm:text-xl line-clamp-1">
-                        {article.title}
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            );
-          })}
+        <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-12 xl:gap-16 items-start">
+          {PORTFOLIO_DATA.insights.slice(0, 1).map((article) => (
+            <InsightCard key={article.id} article={article} featured onRead={() => setReadingArticle(article)} />
+          ))}
+          <div className="flex flex-col">
+            {PORTFOLIO_DATA.insights.slice(1).map((article) => (
+              <InsightCard key={article.id} article={article} onRead={() => setReadingArticle(article)} />
+            ))}
+          </div>
         </div>
 
       </div>

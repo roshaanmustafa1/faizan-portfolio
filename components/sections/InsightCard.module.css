@@ -1,0 +1,29 @@
+.article { position: relative; min-width: 0; }
+.image { position: relative; overflow: hidden; background: #f3f3f3; border-radius: 8px; }
+.featured .image { width: 100%; aspect-ratio: 16 / 9; }
+.featured .content { padding-top: 22px; }
+.category { display: block; color: var(--clr-orange); font-size: 10px; font-weight: 700; line-height: 1.5; letter-spacing: .09em; text-transform: uppercase; }
+.title { margin-top: 10px; font-family: var(--ff-heading); color: var(--clr-black); font-weight: 600; letter-spacing: -.02em; line-height: 1.4; transition: color 200ms ease; }
+.featured .title { font-size: clamp(22px, 2vw, 28px); }
+.excerpt { margin-top: 14px; color: var(--clr-gray); font-size: 14px; line-height: 1.75; }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 14px; color: var(--clr-gray); font-size: 11px; line-height: 1.5; }
+.read { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; padding-bottom: 5px; border-bottom: 1px solid var(--clr-black); font-size: 13px; font-weight: 600; }
+.compact { display: grid; grid-template-columns: 112px minmax(0, 1fr) 20px; gap: 20px; align-items: center; padding: 25px 0; border-bottom: 1px solid rgb(15 14 14 / 10%); }
+.compact:first-child { padding-top: 0; }
+.compact:last-child { border-bottom: 0; padding-bottom: 0; }
+.compact .image { width: 112px; height: 112px; }
+.compact .title { font-size: 18px; margin-top: 7px; }
+.compact .meta { margin-top: 10px; }
+.arrow { color: var(--clr-orange); }
+.button { position: absolute; inset: 0; width: 100%; background: transparent; cursor: pointer; border-radius: 8px; }
+.article:hover .title { color: var(--clr-orange); }
+.button:focus-visible { outline: 2px solid var(--clr-orange); outline-offset: 6px; }
+@media (max-width: 479px) {
+  .compact { grid-template-columns: 80px minmax(0, 1fr); gap: 14px; padding: 20px 0; }
+  .compact .image { width: 80px; height: 96px; }
+  .compact .title { font-size: 16px; }
+  .arrow { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .title { transition: none; }
+}

@@ -17,7 +17,6 @@ export function Header() {
     { name: "Expertise", href: "/#expertise" },
     { name: "Services", href: "/#services" },
     { name: "Experience", href: "/#experience" },
-    { name: "Insights", href: "/#insights" },
     { name: "Contact", href: "/#contact" },
   ];
 

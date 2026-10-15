@@ -10,7 +10,6 @@ import { ApproachSlider } from "@/components/sections/ApproachSlider";
 import { MarqueeSection } from "@/components/sections/MarqueeSection";
 import { CapabilitiesPackages } from "@/components/sections/CapabilitiesPackages";
 import { ExperienceTimeline } from "@/components/sections/ExperienceTimeline";
-import { InsightsSection } from "@/components/sections/InsightsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export default function HomePage() {
@@ -46,9 +45,6 @@ export default function HomePage() {
 
         {/* Career Timeline */}
         <ExperienceTimeline />
-
-        {/* RCM Insights / Articles */}
-        <InsightsSection />
 
         {/* Contact Section */}
         <ContactSection />
