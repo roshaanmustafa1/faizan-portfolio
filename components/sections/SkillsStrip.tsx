@@ -1,10 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
-import type { Swiper as SwiperInstance } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { A11y, Autoplay } from "swiper/modules";
-import "swiper/css";
+import React, { useState } from "react";
 import {
   FileText,
   RefreshCw,
@@ -34,19 +30,7 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 export function SkillsStrip() {
-  const swiperRef = useRef<SwiperInstance | null>(null);
   const [isPaused, setIsPaused] = useState(false);
-
-  function toggleAutoplay() {
-    const swiper = swiperRef.current;
-    if (!swiper || swiper.destroyed) return;
-    if (isPaused) {
-      swiper.autoplay.start();
-    } else {
-      swiper.autoplay.stop();
-    }
-    setIsPaused(!isPaused);
-  }
 
   return (
     <section aria-label="Core RCM competencies" className="pt-0 lg:pt-20 bg-white relative z-20 overflow-hidden">
@@ -66,27 +50,20 @@ export function SkillsStrip() {
         </div>
       </div>
 
-      <Swiper
-        key="skills-continuous-autoplay"
+      <div
         id="skills-carousel"
         data-entrance="up"
         data-entrance-duration="500"
         className={styles.viewport}
-        modules={[Autoplay, A11y]}
-        onSwiper={(swiper) => { swiperRef.current = swiper; }}
-        slidesPerView="auto"
-        spaceBetween={24}
-        breakpoints={{ 640: { spaceBetween: 32 } }}
-        speed={6000}
-        loop
-        grabCursor
-        autoplay={{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: false, waitForTransition: true }}
-        a11y={{ wrapperLiveRegion: false }}
+        role="region"
         aria-label="RCM skills carousel"
         data-lenis-prevent
       >
-          {[...PORTFOLIO_DATA.skills, ...PORTFOLIO_DATA.skills].map((skill, index) => (
-            <SwiperSlide key={`${skill.id}-${index}`} aria-hidden={index >= PORTFOLIO_DATA.skills.length ? true : undefined}>
+        <div className={styles.track} style={{ animationPlayState: isPaused ? "paused" : "running" }}>
+          {[0, 1].map((copy) => (
+            <ul key={copy} className={styles.group} aria-hidden={copy === 1 ? true : undefined}>
+              {PORTFOLIO_DATA.skills.map((skill) => (
+            <li key={skill.id} className={styles.slide}>
             <div
               className={`${styles.card} w-[196px] h-[290px] sm:h-[347px] rounded-[15px] sm:rounded-[300px] border border-black/10 bg-white p-6 flex flex-col items-center justify-between text-center shrink-0`}
             >
@@ -110,11 +87,14 @@ export function SkillsStrip() {
                 </span>
               </div>
             </div>
-            </SwiperSlide>
+            </li>
+              ))}
+            </ul>
           ))}
-      </Swiper>
+        </div>
+      </div>
       <div className="textio-container flex justify-end pb-2">
-        <button type="button" onClick={toggleAutoplay} aria-controls="skills-carousel" aria-pressed={isPaused} className="rounded px-3 py-2 text-xs font-medium text-[#545b63] hover:text-[#087c72] focus-visible:outline-2 focus-visible:outline-[#087c72]">
+        <button type="button" onClick={() => setIsPaused((paused) => !paused)} aria-controls="skills-carousel" aria-pressed={isPaused} className="rounded px-3 py-2 text-xs font-medium text-[#545b63] hover:text-[#087c72] focus-visible:outline-2 focus-visible:outline-[#087c72]">
           {isPaused ? "Resume skills carousel" : "Pause skills carousel"}
         </button>
       </div>
