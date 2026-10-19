@@ -12,6 +12,11 @@
 .socials a { width: 60px; height: 60px; display: grid; place-items: center; border-radius: 50%; background: var(--clr-light-gray); transition: color .3s, background .3s; }
 .socials a:hover { color: white; background: var(--clr-black); }
 .contactBadge { position: absolute; top: 0; right: 12px; z-index: 4; display: grid; place-items: center; width: 128px; height: 128px; }
+.contactText { width: 100%; height: 100%; transform-origin: center; animation: contactOrbit 14s linear infinite; }
+@keyframes contactOrbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 .contactArrow { position: absolute; }
 .portrait { position: absolute; top: 150px; left: -300px; width: 652px; pointer-events: none; }
 .portraitImage { display: block; width: 100%; height: auto; }
@@ -59,7 +64,4 @@
   .description { margin: 0 0 24px; }
   .profession { order: 4; margin: 24px 0 70px; max-width: 100%; font-size: clamp(22px, 5.4vw, 38px); }
   .profession::after { height: 55px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .contactBadge img { animation: none; }
 }

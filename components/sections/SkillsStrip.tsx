@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useRef, useState } from "react";
 import type { Swiper as SwiperInstance } from "swiper";
-import { useReducedMotion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -35,20 +34,19 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 export function SkillsStrip() {
-  const reduceMotion = useReducedMotion();
-  const [swiper, setSwiper] = useState<SwiperInstance | null>(null);
+  const swiperRef = useRef<SwiperInstance | null>(null);
   const [isPaused, setIsPaused] = useState(false);
 
-  useEffect(() => {
+  function toggleAutoplay() {
+    const swiper = swiperRef.current;
     if (!swiper || swiper.destroyed) return;
-    if (reduceMotion || isPaused) {
-      swiper.autoplay.stop();
-      swiper.setTranslate(swiper.getTranslate());
-      swiper.setTransition(0);
-    } else {
+    if (isPaused) {
       swiper.autoplay.start();
+    } else {
+      swiper.autoplay.stop();
     }
-  }, [swiper, reduceMotion, isPaused]);
+    setIsPaused(!isPaused);
+  }
 
   return (
     <section aria-label="Core RCM competencies" className="pt-0 lg:pt-20 bg-white relative z-20 overflow-hidden">
@@ -75,14 +73,14 @@ export function SkillsStrip() {
         data-entrance-duration="500"
         className={styles.viewport}
         modules={[Autoplay, A11y]}
-        onSwiper={setSwiper}
+        onSwiper={(swiper) => { swiperRef.current = swiper; }}
         slidesPerView="auto"
         spaceBetween={24}
         breakpoints={{ 640: { spaceBetween: 32 } }}
-        speed={reduceMotion ? 0 : 6000}
+        speed={6000}
         loop
         grabCursor
-        autoplay={{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: true, waitForTransition: true }}
+        autoplay={{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: false, waitForTransition: true }}
         a11y={{ wrapperLiveRegion: false }}
         aria-label="RCM skills carousel"
         data-lenis-prevent
@@ -116,8 +114,8 @@ export function SkillsStrip() {
           ))}
       </Swiper>
       <div className="textio-container flex justify-end pb-2">
-        <button type="button" onClick={() => setIsPaused((paused) => !paused)} aria-controls="skills-carousel" aria-pressed={isPaused || Boolean(reduceMotion)} disabled={Boolean(reduceMotion)} className="rounded px-3 py-2 text-xs font-medium text-[#545b63] hover:text-[#087c72] focus-visible:outline-2 focus-visible:outline-[#087c72] disabled:opacity-70">
-          {reduceMotion ? "Motion reduced" : isPaused ? "Resume skills carousel" : "Pause skills carousel"}
+        <button type="button" onClick={toggleAutoplay} aria-controls="skills-carousel" aria-pressed={isPaused} className="rounded px-3 py-2 text-xs font-medium text-[#545b63] hover:text-[#087c72] focus-visible:outline-2 focus-visible:outline-[#087c72]">
+          {isPaused ? "Resume skills carousel" : "Pause skills carousel"}
         </button>
       </div>
     </section>

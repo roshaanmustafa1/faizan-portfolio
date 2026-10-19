@@ -60,7 +60,7 @@ export function HeroSection() {
               alt=""
               width={128}
               height={128}
-              className="animate-spin-slow"
+              className={styles.contactText}
             />
             <Image
               src="/images/hero/contact-me-arrow.svg"
