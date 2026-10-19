@@ -60,16 +60,18 @@ export function CapabilitiesPackages() {
                     <Image
                       src="/images/pricing/arrow-black.svg"
                       alt="Flag arrow"
-                      width={16}
-                      height={16}
-                      className="block group-hover:hidden"
+                      width={116}
+                      height={19}
+                      className="block group-hover:hidden w-4 h-auto"
+                      style={{ height: "auto" }}
                     />
                     <Image
                       src="/images/pricing/arrow-white.svg"
                       alt="Flag arrow"
-                      width={16}
-                      height={16}
-                      className="hidden group-hover:block"
+                      width={116}
+                      height={19}
+                      className="hidden group-hover:block w-4 h-auto"
+                      style={{ height: "auto" }}
                     />
                   </div>
                 </div>

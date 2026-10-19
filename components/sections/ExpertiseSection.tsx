@@ -74,6 +74,7 @@ export function ExpertiseSection() {
                 src={selectedProject.image}
                 alt={selectedProject.title}
                 fill
+                sizes="(max-width: 768px) 100vw, 768px"
                 className="object-cover opacity-50"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0f0e0e] to-transparent" />

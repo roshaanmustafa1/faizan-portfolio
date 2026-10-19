@@ -88,6 +88,7 @@ export function ApproachSlider() {
                 src={current.image}
                 alt="Faizan Karamat, Medical Billing and RCM Specialist"
                 fill
+                sizes="(max-width: 767px) 100vw, 340px"
                 className="object-cover transition-all duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />

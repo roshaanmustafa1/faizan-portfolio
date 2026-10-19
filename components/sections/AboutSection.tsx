@@ -19,10 +19,10 @@ export function AboutSection() {
         </h2>
         <div className={styles.grid}>
           <div className={styles.experience} data-entrance="left" data-entrance-duration="600">
-            <Image src="/images/about/arrow.svg" alt="" width={110} height={110} className={styles.arrow} />
+            <Image src="/images/about/arrow.svg" alt="" width={45} height={339} className={styles.arrow} style={{ height: "auto" }} />
             <div className={styles.counter}>{about.experienceYears}</div>
             <h3 className={styles.experienceTitle}>Years of<br />Experience</h3>
-            <Image src="/images/shape-black.svg" alt="" width={92} height={92} className={styles.shape} />
+            <Image src="/images/shape-black.svg" alt="" width={129} height={140} className={styles.shape} style={{ height: "auto" }} />
             <Link href="/about" className="bttn-round"><span>More About Me</span><ArrowUpRight size={20} /></Link>
           </div>
           <div>

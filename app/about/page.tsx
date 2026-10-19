@@ -39,6 +39,7 @@ export default function AboutPage() {
                       src={PORTFOLIO_DATA.personal.portraitImage}
                       alt="Faizan Karamat"
                       fill
+                      sizes="(max-width: 1023px) 100vw, (max-width: 1280px) 42vw, 480px"
                       className="object-contain object-bottom p-4"
                       priority
                     />
