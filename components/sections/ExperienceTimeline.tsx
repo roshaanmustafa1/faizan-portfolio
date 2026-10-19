@@ -19,7 +19,7 @@ export function ExperienceTimeline() {
         {/* Timeline Items */}
         <div className="relative border-l-2 border-black/10 ml-4 sm:ml-8 md:ml-32 space-y-12">
           {PORTFOLIO_DATA.experience.map((job, idx) => (
-            <div key={job.id} className="relative pl-6 sm:pl-10 group">
+            <div key={job.id} className="relative pl-6 sm:pl-10 group" data-entrance={idx % 2 === 0 ? "left" : "right"} data-entrance-duration="500" data-entrance-delay={(idx % 2) * 80}>
               {/* Timeline Node */}
               <div
                 className={`absolute -left-[9px] top-1.5 w-4 h-4 rounded-full border-2 border-white transition-all duration-300 ${

@@ -46,7 +46,7 @@ export function ApproachSlider() {
         {/* Slider Card */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           {/* Main Statement Content */}
-          <div className="lg:col-span-8 space-y-6">
+          <div className="lg:col-span-8 space-y-6" data-entrance="left" data-entrance-duration="600">
             <div className="inline-block px-3 py-1 rounded bg-[#f3f3f3] text-xs font-syne font-bold text-[#17c2b3] uppercase tracking-wider">
               {current.role}
             </div>
@@ -82,7 +82,7 @@ export function ApproachSlider() {
           </div>
 
           {/* Right Visual Image */}
-          <div className="lg:col-span-4 relative flex justify-center">
+          <div className="lg:col-span-4 relative flex justify-center" data-entrance="image-right" data-entrance-duration="1000" data-entrance-delay="100">
             <div className="relative w-full max-w-[340px] aspect-[4/5] rounded-2xl overflow-hidden shadow-xl border border-black/10 bg-[#f3f3f3]">
               <Image
                 src={current.image}

@@ -6,11 +6,15 @@ import { PageBanner } from "@/components/layout/PageBanner";
 import { ExpertiseSection } from "@/components/sections/ExpertiseSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { ApproachSlider } from "@/components/sections/ApproachSlider";
+import { CoreExpertiseSection } from "@/components/sections/CoreExpertiseSection";
+import { MedicalSpecialtiesSection } from "@/components/sections/MedicalSpecialtiesSection";
+import { TechnicalSkillsSection } from "@/components/sections/TechnicalSkillsSection";
+import { RcmMetricsSection } from "@/components/sections/RcmMetricsSection";
 
 export const metadata: Metadata = {
   title: "RCM Expertise & Capabilities | Faizan Karamat",
   description:
-    "Explore Faizan Karamat's core capabilities in U.S. healthcare Accounts Receivable management, insurance claim follow-up, denial rework, and billing operations.",
+    "Explore Faizan Karamat's U.S. healthcare RCM capabilities, medical specialty billing workflows, payer knowledge, technical skills, and operational performance metrics.",
 };
 
 export default function ExpertisePage() {
@@ -26,10 +30,14 @@ export default function ExpertisePage() {
         />
 
         {/* Expertise Section */}
+        <CoreExpertiseSection />
         <ExpertiseSection />
 
         {/* Services Section */}
         <ServicesSection />
+        <MedicalSpecialtiesSection />
+        <TechnicalSkillsSection />
+        <RcmMetricsSection />
 
         {/* Approach Slider */}
         <ApproachSlider />

@@ -16,7 +16,7 @@ export function ServicesSection() {
   return (
     <section id="services" className={styles.section} aria-labelledby="services-heading">
       <div className="textio-container">
-        <div className={styles.heading}>
+        <div className={styles.heading} data-entrance="up" data-entrance-duration="400">
           <span className={styles.eyebrow}>Medical Billing &amp; RCM</span>
           <h2 id="services-heading">Specialized Services</h2>
           <span className={styles.divider} aria-hidden="true" />
@@ -24,7 +24,7 @@ export function ServicesSection() {
 
         <div className={styles.columns}>
           {columns.map((column, columnIndex) => (
-            <div key={columnIndex} className={styles.column}>
+            <div key={columnIndex} className={styles.column} data-entrance={columnIndex === 0 ? "left" : "right"} data-entrance-duration="600" data-entrance-delay={columnIndex * 100}>
               {column.map((service, index) => (
                 <ServiceCard
                   key={service.id}
@@ -38,7 +38,7 @@ export function ServicesSection() {
           ))}
         </div>
 
-        <div className={styles.footer}>
+        <div className={styles.footer} data-entrance="up" data-entrance-duration="300">
           <Link href="/#contact" className={styles.contactLink}>
             Discuss Your Requirements <ArrowUpRight size={17} />
           </Link>

@@ -20,9 +20,12 @@ export function CapabilitiesPackages() {
 
         {/* 3 Package Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {PORTFOLIO_DATA.packages.map((pkg) => (
+          {PORTFOLIO_DATA.packages.map((pkg, index) => (
             <div
               key={pkg.id}
+              data-entrance="up"
+              data-entrance-duration="500"
+              data-entrance-delay={index * 100}
               className="group bg-white hover:bg-[#0f0e0e] border border-black/10 p-8 sm:p-12 flex flex-col justify-between transition-colors duration-300"
             >
               <div>

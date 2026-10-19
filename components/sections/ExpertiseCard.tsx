@@ -5,11 +5,12 @@ import type { CapabilityProject } from "@/data/portfolio";
 interface ExpertiseCardProps {
   project: CapabilityProject;
   onSelect: () => void;
+  delay?: number;
 }
 
-export function ExpertiseCard({ project, onSelect }: ExpertiseCardProps) {
+export function ExpertiseCard({ project, onSelect, delay = 0 }: ExpertiseCardProps) {
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-xl border border-white/10 bg-[#191818] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-xl motion-reduce:transform-none motion-reduce:transition-none">
+    <article data-entrance="zoom" data-entrance-duration="900" data-entrance-delay={delay} className="group relative flex flex-col overflow-hidden rounded-xl border border-white/10 bg-[#191818] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-xl motion-reduce:transform-none motion-reduce:transition-none">
       <div className="relative aspect-[16/10] overflow-hidden bg-white">
         <Image
           src={project.image}

@@ -11,6 +11,10 @@ import { MarqueeSection } from "@/components/sections/MarqueeSection";
 import { CapabilitiesPackages } from "@/components/sections/CapabilitiesPackages";
 import { ExperienceTimeline } from "@/components/sections/ExperienceTimeline";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { CoreExpertiseSection } from "@/components/sections/CoreExpertiseSection";
+import { MedicalSpecialtiesSection } from "@/components/sections/MedicalSpecialtiesSection";
+import { TechnicalSkillsSection } from "@/components/sections/TechnicalSkillsSection";
+import { RcmMetricsSection } from "@/components/sections/RcmMetricsSection";
 
 export default function HomePage() {
   return (
@@ -24,6 +28,7 @@ export default function HomePage() {
 
         {/* Skills & Competencies Strip */}
         <SkillsStrip />
+        <CoreExpertiseSection />
 
         {/* About Section */}
         <AboutSection />
@@ -33,6 +38,7 @@ export default function HomePage() {
 
         {/* Professional Services */}
         <ServicesSection />
+        <MedicalSpecialtiesSection />
 
         {/* Professional Approach / Philosophy */}
         <ApproachSlider />
@@ -42,6 +48,8 @@ export default function HomePage() {
 
         {/* Core Capabilities / Packages */}
         <CapabilitiesPackages />
+        <TechnicalSkillsSection />
+        <RcmMetricsSection />
 
         {/* Career Timeline */}
         <ExperienceTimeline />

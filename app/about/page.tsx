@@ -32,7 +32,7 @@ export default function AboutPage() {
           <div className="textio-container">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
               {/* Portrait & Fast Stats */}
-              <div className="lg:col-span-5">
+              <div className="lg:col-span-5" data-entrance="left" data-entrance-duration="600">
                 <div className="relative rounded-2xl overflow-hidden bg-[#f3f3f3] border border-black/10 shadow-xl mb-8">
                   <div className="relative aspect-[3/4] w-full">
                     <Image
@@ -72,7 +72,7 @@ export default function AboutPage() {
               </div>
 
               {/* Bio & Deep Dive */}
-              <div className="lg:col-span-7 space-y-8">
+              <div className="lg:col-span-7 space-y-8" data-entrance="right" data-entrance-duration="600" data-entrance-delay="100">
                 <div>
                   <span className="text-xs font-syne font-bold uppercase tracking-widest text-[#17c2b3] block mb-2">
                     Professional Biography

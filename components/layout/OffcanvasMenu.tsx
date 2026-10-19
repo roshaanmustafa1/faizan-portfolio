@@ -24,6 +24,8 @@ export function OffcanvasMenu({ isOpen, onClose }: OffcanvasMenuProps) {
 
       {/* Drawer */}
       <aside
+        inert={!isOpen}
+        aria-hidden={!isOpen}
         className={`fixed top-0 right-0 w-[340px] max-w-[90vw] h-full bg-[#f3f3f3] z-[9999] overflow-y-auto transition-transform duration-400 ease-out shadow-2xl flex flex-col justify-between p-8 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
@@ -55,6 +57,12 @@ export function OffcanvasMenu({ isOpen, onClose }: OffcanvasMenuProps) {
             5+ years of specialized experience in U.S. healthcare RCM, Accounts Receivable management,
             denial resolution, and payment collections. Currently Assistant Manager Billing and Operations at F&A Global.
           </p>
+
+          <nav aria-label="RCM knowledge" className="mb-8 flex flex-col gap-3 text-sm font-semibold">
+            <Link href="/#specialties" onClick={onClose} className="hover:text-[#087c72]">Medical Specialties</Link>
+            <Link href="/#technical-skills" onClick={onClose} className="hover:text-[#087c72]">Technical Skills</Link>
+            <Link href="/#rcm-metrics" onClick={onClose} className="hover:text-[#087c72]">Performance Metrics</Link>
+          </nav>
 
           {/* Contact Details */}
           <div className="space-y-5 mb-8">

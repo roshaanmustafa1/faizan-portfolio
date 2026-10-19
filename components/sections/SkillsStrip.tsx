@@ -1,6 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
+import type { Swiper as SwiperInstance } from "swiper";
+import { useReducedMotion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -33,6 +35,21 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 export function SkillsStrip() {
+  const reduceMotion = useReducedMotion();
+  const [swiper, setSwiper] = useState<SwiperInstance | null>(null);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    if (!swiper || swiper.destroyed) return;
+    if (reduceMotion || isPaused) {
+      swiper.autoplay.stop();
+      swiper.setTranslate(swiper.getTranslate());
+      swiper.setTransition(0);
+    } else {
+      swiper.autoplay.start();
+    }
+  }, [swiper, reduceMotion, isPaused]);
+
   return (
     <section aria-label="Core RCM competencies" className="pt-0 lg:pt-20 bg-white relative z-20 overflow-hidden">
       <div className="sr-only">
@@ -46,7 +63,7 @@ export function SkillsStrip() {
             </h2>
           </div>
           <p className="text-sm text-[#545b63] max-w-md font-manrope">
-            Validated hands-on expertise managing high-volume U.S. healthcare billing, AR recovery, and payer interactions.
+            U.S. healthcare billing, A/R recovery, payer follow-up, and operational coordination.
           </p>
         </div>
       </div>
@@ -54,21 +71,24 @@ export function SkillsStrip() {
       <Swiper
         key="skills-continuous-autoplay"
         id="skills-carousel"
+        data-entrance="up"
+        data-entrance-duration="500"
         className={styles.viewport}
         modules={[Autoplay, A11y]}
+        onSwiper={setSwiper}
         slidesPerView="auto"
         spaceBetween={24}
         breakpoints={{ 640: { spaceBetween: 32 } }}
-        speed={6000}
+        speed={reduceMotion ? 0 : 6000}
         loop
         grabCursor
-        autoplay={{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: false, waitForTransition: true }}
+        autoplay={{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: true, waitForTransition: true }}
         a11y={{ wrapperLiveRegion: false }}
         aria-label="RCM skills carousel"
         data-lenis-prevent
       >
           {[...PORTFOLIO_DATA.skills, ...PORTFOLIO_DATA.skills].map((skill, index) => (
-            <SwiperSlide key={`${skill.id}-${index}`}>
+            <SwiperSlide key={`${skill.id}-${index}`} aria-hidden={index >= PORTFOLIO_DATA.skills.length ? true : undefined}>
             <div
               className={`${styles.card} w-[196px] h-[290px] sm:h-[347px] rounded-[15px] sm:rounded-[300px] border border-black/10 bg-white p-6 flex flex-col items-center justify-between text-center shrink-0`}
             >
@@ -95,6 +115,11 @@ export function SkillsStrip() {
             </SwiperSlide>
           ))}
       </Swiper>
+      <div className="textio-container flex justify-end pb-2">
+        <button type="button" onClick={() => setIsPaused((paused) => !paused)} aria-controls="skills-carousel" aria-pressed={isPaused || Boolean(reduceMotion)} disabled={Boolean(reduceMotion)} className="rounded px-3 py-2 text-xs font-medium text-[#545b63] hover:text-[#087c72] focus-visible:outline-2 focus-visible:outline-[#087c72] disabled:opacity-70">
+          {reduceMotion ? "Motion reduced" : isPaused ? "Resume skills carousel" : "Pause skills carousel"}
+        </button>
+      </div>
     </section>
   );
 }

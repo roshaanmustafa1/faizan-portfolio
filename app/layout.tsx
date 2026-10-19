@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { SmoothScroll } from "@/components/animation/SmoothScroll"
+import { EntranceAnimations } from "@/components/animation/EntranceAnimations"
 import { cn } from "@/lib/utils"
 
 const headingFont = Inter({
@@ -58,7 +59,9 @@ export default function RootLayout({
     >
       <body className="font-sans bg-white text-[#0f0e0e] selection:bg-[#17c2b3] selection:text-white">
         <ThemeProvider>
-          <SmoothScroll>{children}</SmoothScroll>
+          <SmoothScroll>
+            <EntranceAnimations>{children}</EntranceAnimations>
+          </SmoothScroll>
         </ThemeProvider>
       </body>
     </html>

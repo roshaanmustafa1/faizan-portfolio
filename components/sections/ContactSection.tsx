@@ -71,7 +71,7 @@ export function ContactSection() {
       <div className="textio-container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Form & Heading */}
-          <div className="lg:col-span-7 space-y-8">
+          <div className="lg:col-span-7 space-y-8" data-entrance="left" data-entrance-duration="600">
             <div>
               <span className="text-xs font-syne font-bold uppercase tracking-widest text-[#17c2b3] block mb-2">
                 Get In Touch
@@ -208,7 +208,7 @@ export function ContactSection() {
           </div>
 
           {/* Right Column: Numbered Navigation & Socials */}
-          <div className="lg:col-span-5 lg:pl-12 pt-8 lg:pt-16">
+          <div className="lg:col-span-5 lg:pl-12 pt-8 lg:pt-16" data-entrance="right" data-entrance-duration="600" data-entrance-delay="100">
             <nav className="divide-y divide-[#292727] border-y border-[#292727]">
               {navItems.map((item) => (
                 <Link

@@ -12,7 +12,7 @@ export function InsightsSection() {
     <section id="insights" aria-labelledby="insights-heading" className="py-16 lg:py-24 bg-white relative z-10">
       <div className="textio-container">
         {/* Section Title with Textio bar & dot */}
-        <div className="mb-8 lg:mb-10">
+        <div className="mb-8 lg:mb-10" data-entrance="up" data-entrance-duration="400">
           <span className="block text-[11px] font-semibold uppercase tracking-[0.12em] text-[#17c2b3] mb-3">Knowledge &amp; Perspectives</span>
           <h2 id="insights-heading" className="font-syne font-semibold text-3xl lg:text-4xl text-[#0f0e0e]">
             RCM Insights

@@ -31,7 +31,7 @@ export function ExpertiseSection() {
           </div>
 
           {/* Filter Categories */}
-          <nav aria-label="Filter expertise" className="flex flex-wrap items-center gap-2">
+          <nav aria-label="Filter expertise" className="flex flex-wrap items-center gap-2" data-entrance="right" data-entrance-duration="400">
             {filters.map((filter) => {
               const isActive = activeFilter === filter;
               return (
@@ -51,8 +51,8 @@ export function ExpertiseSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-6">
-          {filteredProjects.map((project) => (
-            <ExpertiseCard key={project.id} project={project} onSelect={() => setSelectedProject(project)} />
+          {filteredProjects.map((project, index) => (
+            <ExpertiseCard key={project.id} project={project} delay={(index % 3) * 80} onSelect={() => setSelectedProject(project)} />
           ))}
         </div>
 
@@ -119,7 +119,7 @@ export function ExpertiseSection() {
                 <div className="flex items-center gap-3">
                   <ShieldCheck className="w-8 h-8 text-[#17c2b3] shrink-0" />
                   <div>
-                    <div className="font-syne font-bold text-sm text-[#0f0e0e]">Verified RCM Experience</div>
+                    <div className="font-syne font-bold text-sm text-[#0f0e0e]">Professional Background</div>
                     <div className="text-xs text-[#545b63]">F&A Global, PRG Pakistan & CureMD</div>
                   </div>
                 </div>

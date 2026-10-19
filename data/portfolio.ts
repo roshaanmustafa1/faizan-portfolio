@@ -183,8 +183,9 @@ export const PORTFOLIO_DATA = {
     sectionTitle: "About Me",
     headline: "Driving Efficiency Across the Healthcare Revenue Cycle.",
     paragraphs: [
-      "I am a Medical Billing and Revenue Cycle Management professional with more than five years of dedicated experience supporting U.S. healthcare billing operations. My work focuses on accelerating accounts receivable recovery, structured denial management, rigorous insurance claim follow-up, payment collections, and coordinated billing operations.",
-      "Throughout my career—progressing from RCM Executive to Billing Executive, Senior AR Executive, and now Assistant Manager Billing & Operations at F&A Global—I have led high-performing billing workflows that resolve revenue bottlenecks, eliminate recurring claim rejection patterns, and ensure strict compliance with healthcare billing standards.",
+      "I am a U.S. Healthcare Revenue Cycle Management (RCM) professional with over five years of experience supporting medical billing operations, accounts receivable management, denial resolution, insurance follow-up, and payment recovery.",
+      "Currently serving as Assistant Manager – Billing & Operations at F&A Global, I coordinate billing workflows, improve accounts receivable visibility, support complex claim resolution, and monitor operational performance.",
+      "My professional focus covers insurance claim follow-up, claim rework, denial investigation, payment reconciliation, A/R aging analysis, and operational coordination. I bring a process-driven approach centered on accuracy, accountability, timely claim resolution, and continuous improvement.",
     ],
     experienceYears: "5+",
     statTitle: "Years Experience",
@@ -239,7 +240,7 @@ export const PORTFOLIO_DATA = {
         "In-depth investigation of eligibility, authorization, and coding denials",
         "Systematic claim rework, medical record submission, and reconsiderations",
         "Root cause analysis and feedback loops to credentialing and intake teams",
-        "High success rate in first and second-level appeals",
+        "Follow-up on first and second-level appeals and payer decisions",
       ],
     },
     {
@@ -297,8 +298,8 @@ export const PORTFOLIO_DATA = {
       points: [
         "Patient demographic intake, eligibility & benefits verification",
         "Charge entry validation, clearinghouse scrubbing & claim submission",
-        "Clearinghouse EDI 837 claim transmission and 999/277 acknowledgment audit",
-        "Strict adherence to timely filing limits across all 50 states",
+        "Clearinghouse EDI 837 claim transmission and 999/277CA acknowledgment review",
+        "Payer-specific timely filing requirements and submission tracking",
       ],
     },
     {
@@ -317,7 +318,7 @@ export const PORTFOLIO_DATA = {
       title: "Denial Management",
       tagline: "Root-cause investigation, corrective rework & structured appeals",
       points: [
-        "Detailed classification of CARC and RARC rejection codes",
+        "Review of claim adjustment reason codes (CARC) and remittance advice remark codes (RARC)",
         "Appeals packet preparation with clinical documentation & medical records",
         "Eligibility mismatch resolution, coordination of benefits (COB) updates",
         "Operational feedback to upstream intake teams to curb recurring rejections",

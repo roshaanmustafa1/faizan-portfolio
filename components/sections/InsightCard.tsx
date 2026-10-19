@@ -11,7 +11,7 @@ interface InsightCardProps {
 
 export function InsightCard({ article, onRead, featured = false }: InsightCardProps) {
   return (
-    <article className={`${styles.article} ${featured ? styles.featured : styles.compact}`}>
+    <article data-entrance={featured ? "left" : "right"} data-entrance-duration="500" className={`${styles.article} ${featured ? styles.featured : styles.compact}`}>
       <div className={styles.image}>
         <Image src={article.image} alt={article.title} fill sizes={featured ? "(max-width: 1023px) 100vw, 50vw" : "(max-width: 479px) 80px, 112px"} className="object-cover" />
       </div>
