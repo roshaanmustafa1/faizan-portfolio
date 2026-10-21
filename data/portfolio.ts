@@ -91,7 +91,7 @@ export const PORTFOLIO_DATA = {
     linkedin: "https://www.linkedin.com/in/faizan-karamat-6571241b2",
     linkedinDisplay: "linkedin.com/in/faizan-karamat-6571241b2",
     cvPath: "/resume/faizan-karamat-resume.pdf",
-    portraitImage: "/images/faizan-karamat.png",
+    portraitImage: "/images/snap.jpeg",
   },
 
   hero: {
@@ -355,7 +355,7 @@ export const PORTFOLIO_DATA = {
       subtitle: "The Foundation of Zero-Error Billing",
       description:
         "Medical billing leaves no margin for assumptions. Every patient record, modifier, authorization number, and diagnostic code is meticulously cross-referenced prior to clearinghouse transmission to ensure maximum first-pass clean claim rates.",
-      image: "/images/faizan-karamat.png",
+      image: "/images/approach-image.jpg",
       author: "Faizan Karamat",
       role: "Methodology Principle #1",
     },
@@ -365,7 +365,7 @@ export const PORTFOLIO_DATA = {
       subtitle: "Preventing Aging Slip & Payer Delays",
       description:
         "Unpaid claims do not resolve themselves. I implement disciplined, cadence-driven follow-up cycles across web portals and payer representative lines, actively preventing accounts from slipping into delinquent aging tiers.",
-      image: "/images/faizan-karamat.png",
+      image: "/images/approach-image.jpg",
       author: "Faizan Karamat",
       role: "Methodology Principle #2",
     },
@@ -375,7 +375,7 @@ export const PORTFOLIO_DATA = {
       subtitle: "Fixing Upstream Causes, Not Just Symptoms",
       description:
         "Rather than repeatedly patching rejected claims, my approach isolates the root cause—whether patient demographic capture, pre-authorization omission, or coding conflict—and builds preventative operational safeguards.",
-      image: "/images/faizan-karamat.png",
+      image: "/images/approach-image.jpg",
       author: "Faizan Karamat",
       role: "Methodology Principle #3",
     },
@@ -385,7 +385,7 @@ export const PORTFOLIO_DATA = {
       subtitle: "Data-Driven Transparency & KPI Accountability",
       description:
         "High-performance RCM relies on operational visibility. Through structured Excel reporting, daily productivity benchmarks, and clear delegation, team members stay focused on high-priority accounts that drive healthy cash flow.",
-      image: "/images/faizan-karamat.png",
+      image: "/images/approach-image.jpg",
       author: "Faizan Karamat",
       role: "Methodology Principle #4",
     },
