@@ -18,7 +18,7 @@ export function HeroSection() {
   const headingWords = hero.heading.split(" ");
 
   return (
-    <section className={styles.hero} aria-labelledby="hero-heading">
+    <section id="home" className={styles.hero} aria-labelledby="hero-heading">
       <div className={`textio-container ${styles.container}`}>
         {/* Diagonal aesthetic line */}
         <motion.div

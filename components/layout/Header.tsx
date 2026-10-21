@@ -7,11 +7,16 @@ import { ArrowUpRight, Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { useAnimation } from "@/components/animation/AnimationContext";
 import { OffcanvasMenu } from "./OffcanvasMenu";
+import { useActiveSection } from "./useActiveSection";
+
+const sectionIds = ["about", "expertise", "services", "specialties", "technical-skills", "experience", "contact"];
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
   const pathname = usePathname();
+  const activeHash = useActiveSection(sectionIds);
+  const activeHref = `${pathname}${activeHash}`;
   const { isLoaded } = useAnimation();
 
   const navLinks = [
@@ -52,7 +57,7 @@ export function Header() {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-6 xl:space-x-9">
               {navLinks.map((link, index) => {
-                const isActive = pathname === link.href;
+                const isActive = activeHref === link.href;
                 return (
                   <motion.div
                     key={link.name}
@@ -67,6 +72,7 @@ export function Header() {
                   >
                     <Link
                       href={link.href}
+                      aria-current={isActive ? "location" : undefined}
                       className={`font-syne text-[15px] xl:text-[16px] font-bold tracking-tight transition-colors duration-200 py-2 relative block ${
                         isActive ? "text-[#17c2b3]" : "text-[#0f0e0e] hover:text-[#17c2b3]"
                       }`}
@@ -132,8 +138,11 @@ export function Header() {
                 <Link
                   key={link.name}
                   href={link.href}
+                  aria-current={activeHref === link.href ? "location" : undefined}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="font-syne font-bold text-lg text-[#0f0e0e] hover:text-[#17c2b3] py-1 border-b border-black/5"
+                  className={`font-syne font-bold text-lg transition-colors py-1 border-b border-black/5 ${
+                    activeHref === link.href ? "text-[#17c2b3]" : "text-[#0f0e0e] hover:text-[#17c2b3]"
+                  }`}
                 >
                   {link.name}
                 </Link>
