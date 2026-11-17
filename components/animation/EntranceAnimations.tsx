@@ -42,7 +42,6 @@ function AnimationWrapper({ children }: { children: ReactNode }) {
             trigger: title,
             start: "top 88%",
             toggleActions: "play none none none",
-            once: true,
           },
         });
 
@@ -90,7 +89,6 @@ function AnimationWrapper({ children }: { children: ReactNode }) {
             trigger: el,
             start: "top 88%",
             toggleActions: "play none none none",
-            once: true,
           },
         };
 
@@ -122,7 +120,9 @@ function AnimationWrapper({ children }: { children: ReactNode }) {
       );
 
       cardGrids.forEach((grid) => {
-        const items = grid.children;
+        const items = Array.from(grid.children).filter(
+          (item) => !item.hasAttribute("data-entrance")
+        );
         if (items.length > 0) {
           gsap.from(items, {
             opacity: 0,
@@ -134,7 +134,6 @@ function AnimationWrapper({ children }: { children: ReactNode }) {
               trigger: grid,
               start: "top 85%",
               toggleActions: "play none none none",
-              once: true,
             },
           });
         }

@@ -6,10 +6,10 @@ import { PORTFOLIO_DATA } from "@/data/portfolio";
 
 export function ExperienceTimeline() {
   return (
-    <section id="experience" className="py-24 lg:py-36 bg-white relative z-10 overflow-hidden">
+    <section id="experience" className="pt-8 pb-24 lg:pt-12 lg:pb-36 bg-white relative z-10 overflow-hidden">
       <div className="textio-container">
         {/* Section Title with Textio bar & dot */}
-        <div className="section-title mb-16">
+        <div className="section-title mb-10 lg:mb-12">
           <h3 className="font-syne font-bold text-4xl lg:text-5xl text-[#0f0e0e]">
             Career Progression
           </h3>
